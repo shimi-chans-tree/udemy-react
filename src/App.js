@@ -1,5 +1,5 @@
-
 import React ,{Component} from 'react';
+import propTypes from 'prop-types';
 
 // function App() {
 //   // const greeting = "Hi";
@@ -18,7 +18,7 @@ const App = ()=>{
   const profiles = [
     {name:"Taro",age:10},
     {name:"Hanako",age:5},
-    {name:"Noname"},
+    {name:"NONAME",age:3},
   ]
   return (
   <div>
@@ -27,8 +27,7 @@ const App = ()=>{
         return  <User name={profile.name} age ={profile.age} key={index}/>
       })
     }
-    {/* <User name={"Taro"} age ={10}/>
-    <User name={"Hanako"} age ={5}/> */}
+   
   </div>
   )
 }
@@ -36,8 +35,9 @@ const User = (props)=>{
 return <div>Hi,i am {props.name},and {props.age}years old!</div>
 }
 
-User.defaultProps = {
-  age:1
+User.propTypes = {
+  name:propTypes.string,
+  age:propTypes.number.isRequired
 }
 
 // class App extends Component{

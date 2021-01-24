@@ -1,6 +1,7 @@
 import React ,{Component} from 'react';
 import {connect} from 'react-redux';
 import _ from 'lodash';
+import { Link } from 'react-router-dom';
 
 import { readEvents } from '../actions';
 
@@ -23,6 +24,7 @@ renderEvents(){
 
   render(){
     return(
+    <React.Fragment>
      <table>
        <thead>
          <tr>
@@ -35,6 +37,8 @@ renderEvents(){
          {this.renderEvents()}
        </tbody>
      </table>
+     <Link to = "/events/new">New Events</Link>
+     </React.Fragment>
     )
   }
 }

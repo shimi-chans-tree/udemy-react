@@ -2,6 +2,8 @@ import React ,{Component} from 'react';
 import {connect} from 'react-redux';
 import _ from 'lodash';
 import { Link } from 'react-router-dom';
+import RaisedButton from 'material-ui/RaisedButton';
+import TextField from 'material-ui/TextField';
 import {
   Table,
   TableBody,
@@ -13,6 +15,7 @@ import {
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ContentAdd from 'material-ui/svg-icons/content/add';
 import { readEvents } from '../actions';
+
 
 
 class EventsIndex extends Component {
